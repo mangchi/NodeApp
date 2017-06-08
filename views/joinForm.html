@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html>
+<head>
+    <title>222</title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href="/stylesheets/style.css"/>
+    <script src="/javascripts/jquery-1.12.4.min.js"/>
+    <script>
+
+        $("#btnJoin").click(function(){
+           alert("bb");
+           return;
+        });
+        /*var btnJoin = document.getElementById('btnJoin');
+        //$("#btnJoin").addEventListener("click",function(event){
+        btnJoin.addEventListener("click",function(event){
+            alert("bb");
+            $('input[type=text]').each(function(){
+                if($.trim(this.val()) == ''){
+                    this.focus();
+                    alert($this.attr('id') +"을(를) 입력하세요");
+                    return;
+                }
+            });
+
+        }, false);*/
+    </script>
+</head>
+<body>
+<h1>22222</h1>
+<form id="joinForm" action="/join" method="post">
+    <table width="400" border="1">
+        <tr>
+            <th>아이디</th>
+            <td><input type="text" id="id" ></td>
+        </tr>
+        <tr>
+            <th>이름</th>
+            <td><input type="text" id="name" ></td>
+        </tr>
+    </table>
+    <button id="btnJoin" >가입</button>
+
+</form>
+
+</body>
+
+</html>
+

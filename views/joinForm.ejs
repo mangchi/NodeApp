@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title%></title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/javascripts/jquery-1.12.4.min.js'></script>
+
+</head>
+<body>
+       <h1><%=title%></h1>
+       <form id="joinForm">
+           <table width="400" border="1">
+               <tr>
+                   <th>아이디</th>
+                   <td><input type="text" id="id" ></td>
+               </tr>
+               <tr>
+                   <th>이름</th>
+                   <td><input type="text" id="name" ></td>
+               </tr>
+           </table>
+           <button id="btnJoin" >가입</button>
+
+       </form>
+       <script>
+
+           window.addEventListener("load",function(){
+               console.log("load");
+           });
+
+
+           var btnJoin = document.getElementById('btnJoin');
+           //$("#btnJoin").addEventListener('click', function(event) {
+           btnJoin.addEventListener("click",function(event){
+               console.log("bbbb");
+               $('input[type=text]').each(function(){
+                   if($.trim(this.value) == ''){
+
+                       alert(this.getAttribute('id')
+                           +"을(를) 입력하세요");
+                       this.focus();
+                       return false;
+                   }
+               });
+               $("#joinForm").attr('method','post');
+               $("#joinForm").attr('action','/join');
+               $("#joinForm").submit();
+
+           }, false);
+       </script>
+</body>
+
+</html>
+
